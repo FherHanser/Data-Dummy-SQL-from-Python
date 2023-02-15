@@ -14,11 +14,10 @@ En el archivo "insertarUsuarioenSQL.py" se deben establecer la conección a la b
 # Pasos:
 
 1. Descargar la librerias pertinentes
-2. Descargar las dependecias
-3. Tener una base de datos SQL.
+2. Tener una base de datos SQL.
 
 
-# Aplicaciones utilizas:
+# Aplicaciones utilizadas:
 
 1. Spyder (anaconda 3), para Phyton.
 2. MySQL WorkBench 8.0 CE.
