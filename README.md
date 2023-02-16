@@ -13,7 +13,8 @@ En el archivo "insertarUsuarioenSQL.py" se deben establecer la conección a la b
 
 # Pasos:
 
-1. Descargar las librerias pertinentes en el entorno Python:
+1. Librerias pertinentes en el entorno Python:
+    - tkinter
     - pip install pymysql
     - pip install faker
     - pip install random
