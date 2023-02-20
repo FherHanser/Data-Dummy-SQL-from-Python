@@ -9,7 +9,8 @@ CUI, nombre_completo, centro_de_votacion, departamento y municipio.
 
 El archivo "creaUsuarios.py", recibe un parámetro que establece la cantidad de usuarios que se debe de crear.
 También se ajusta a la creación (nombres) de columnas, formas de separarlas ("|", ",").
-En el archivo "insertarUsuarioenSQL.py" se deben establecer la conección a la base de datos y tabla a donde vamos a carga la información.
+Con una base de datos ya existente, en el archivo "insertarUsuarioenSQL.py" se deben establecer la conección a 
+la base de datos y tabla a donde vamos a carga la información.
 
 # Pasos:
 
