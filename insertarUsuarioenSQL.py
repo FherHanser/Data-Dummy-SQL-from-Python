@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Feb 2023
+
+@author: Fernand J.Hanser
+"""
+
 import tkinter as tk
 from tkinter import filedialog
 import pymysql
@@ -48,18 +55,19 @@ def procesar_archivo():
                     fields = line.strip().split(',') # Separar los campos de la línea
 
                     # Verificar si la lista fields tiene suficientes elementos
-                    if len(fields) < 5:
+                    if len(fields) < 6:
                         print(f"La línea '{line}' no tiene suficientes elementos para ser procesada")
                         continue
 
                     cui = fields[0]
                     nombre_completo = fields[1]
-                    centro_votacion = fields[2]
-                    departamento = fields[3]
-                    municipio = fields[4]
+                    fecha_de_nacimiento = fields [2]
+                    centro_votacion = fields[3]
+                    departamento = fields[4]
+                    municipio = fields[5]
 
                     # Insertar los datos en la tabla "usuarios"
-                    query = f"INSERT INTO ciudadanos (cui, nombre_completo, centro_de_votacion, departamento, municipio) VALUES ('{cui}', '{nombre_completo}', '{centro_votacion}', '{departamento}', '{municipio}')"
+                    query = f"INSERT IGNORE INTO ciudadanos (cui, nombre_completo, fecha_de_nacimiento, centro_de_votacion, departamento, municipio) VALUES ('{cui}', '{nombre_completo}','{fecha_de_nacimiento}', '{centro_votacion}','{departamento}', '{municipio}')"
                     cursor.execute(query)
 
             # Cerrar la conexión a la base de datos
@@ -77,8 +85,8 @@ root = tk.Tk()
 root.title("Establecer conexion a la Base de Datos")
 
 # Establecer tamaño y centrar ventana
-window_width = 400
-window_height = 250
+window_width = 600
+window_height = 300
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 x = (screen_width // 2) - (window_width // 2)
